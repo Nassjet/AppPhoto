@@ -1,7 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import slicePhoto from './slicePhoto';
+import sliceCamera from './sliceCamera';
+
 export const store = configureStore({
   reducer: {
-    favorites: slicePhoto,
+    photos: slicePhoto,
+    camera: sliceCamera,
   },
 });
