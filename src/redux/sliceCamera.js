@@ -1,4 +1,3 @@
-// sliceCamera.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const sliceCamera = createSlice({

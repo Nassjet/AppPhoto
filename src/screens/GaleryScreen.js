@@ -1,9 +1,12 @@
-import { View, Text} from "react-native";
+import React from 'react';
+import { View, Text } from 'react-native';
 
-export default function GaleryScreen() {
-    return(
-        <View>
-            <Text>Machin</Text>
-        </View>
-    )
-}
+const GaleryScreen = () => {
+  return (
+    <View>
+      <Text>Machin</Text>
+    </View>
+  );
+};
+
+export default GaleryScreen;
