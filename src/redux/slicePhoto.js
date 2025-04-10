@@ -6,8 +6,11 @@ const slicePhoto = createSlice({
     galery: []
   },
   reducers: {
-    takePhoto: (state,action) => {
-      state.galery.push(action.payload);
+    takePhoto: (state, action) => {
+      state.galery.push({
+        id: action.payload.id,
+        uri: action.payload.uri,
+      });
     },
     deletePhoto: (state, action) => {
       state.galery = state.galery.filter((photo) => photo.id !== action.payload);

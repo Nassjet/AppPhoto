@@ -1,12 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
+import GaleryPhotos from '../components/GaleryPhotos'; // Chemin à ajuster si nécessaire
 
 const GaleryScreen = () => {
-  return (
-    <View>
-      <Text>Machin</Text>
-    </View>
-  );
+    return (
+        <View style={{ flex: 1 }}>
+            <GaleryPhotos />
+        </View>
+    );
 };
 
 export default GaleryScreen;
