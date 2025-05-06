@@ -37,7 +37,7 @@ export default function MainScreen({navigation}) {
             setPhoto(photo.uri);
             // Sauvegarde la photo dans Redux avec un ID unique
             dispatch(takePhoto({
-                id: Date.now(), // Utilise un timestamp comme ID unique
+                id: Date.now(),
                 uri: photo.uri,
             }));
         }
@@ -46,11 +46,8 @@ export default function MainScreen({navigation}) {
     return (
         <View style={styles.container}>
             <CameraView style={styles.camera} facing={facing} ref={cameraRef}>
-                {/* Supprimez l'ancien buttonContainer */}
 
-                {/* Nouvelle barre de contrôle en bas */}
                 <View style={styles.controlBar}>
-                    {/* Bouton Flip à gauche */}
                     <TouchableOpacity
                         style={styles.flipButton}
                         onPress={toggleCameraFacing}
@@ -58,7 +55,6 @@ export default function MainScreen({navigation}) {
                         <Icon name="autorenew" size={28} color="white" />
                     </TouchableOpacity>
 
-                    {/* Bouton de capture au centre */}
                     <TouchableOpacity
                         style={styles.captureButton}
                         onPress={takePicture}
@@ -66,7 +62,6 @@ export default function MainScreen({navigation}) {
                         <View style={styles.innerCircle} />
                     </TouchableOpacity>
 
-                    {/* Miniature photo à droite */}
                     {photo ? (
                         <TouchableOpacity
                             style={styles.thumbnailButton}
@@ -112,7 +107,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         backgroundColor: 'transparent',
         margin: 64,
-        justifyContent: 'space-between', // Espace entre les boutons
+        justifyContent: 'space-between',
     },
     button: {
         alignSelf: 'flex-end',
@@ -129,13 +124,13 @@ const styles = StyleSheet.create({
     photoButton: {
         position: 'absolute',
         bottom: 20,
-        right: 20, // 20 pixels de la droite
-        width: 80, // Largeur de la miniature
-        height: 80, // Hauteur de la miniature
-        borderRadius: 10, // Bords arrondis
-        borderWidth: 2, // Bordure
-        borderColor: 'white', // Couleur de la bordure
-        overflow: 'hidden', // Pour que l'image respecte les bords arrondis
+        right: 20,
+        width: 80,
+        height: 80,
+        borderRadius: 10,
+        borderWidth: 2,
+        borderColor: 'white',
+        overflow: 'hidden',
     },
     photoImage: {
         width: '100%',

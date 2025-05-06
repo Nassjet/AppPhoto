@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import GaleryPhotos from '../components/GaleryPhotos'; // Chemin à ajuster si nécessaire
+import GaleryPhotos from '../components/GaleryPhotos';
 
 const GaleryScreen = () => {
     return (
