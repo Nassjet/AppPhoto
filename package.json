@@ -11,12 +11,12 @@
   "dependencies": {
     "@react-navigation/stack": "^7.1.2",
     "@reduxjs/toolkit": "^2.6.1",
-    "expo": "~52.0.37",
+    "expo": "~53.0.5",
     "expo-camera": "^16.0.17",
     "expo-file-system": "~18.0.11",
     "expo-status-bar": "~2.0.1",
-    "react": "18.3.1",
-    "react-native": "0.76.7",
+    "react": "19.0.0",
+    "react-native": "0.79.2",
     "react-redux": "^9.2.0"
   },
   "devDependencies": {
